@@ -1,0 +1,6 @@
+.headerWrapper {
+    grid-area: header;
+    border: 2px dashed darkslateblue;
+    background-color: darkslategrey;
+    color: white;
+}

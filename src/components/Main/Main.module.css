@@ -1,0 +1,7 @@
+.mainWrapper {
+    grid-area: main;
+    border: 2px dashed darkslateblue;
+    background-color: darkslategrey;
+    color: white;
+    padding: 2%;
+}

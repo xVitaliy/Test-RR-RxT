@@ -1,0 +1,16 @@
+.footerWrapper {
+    grid-area: footer;
+    border: 2px dashed darkslateblue;
+    background-color: darkslategrey;
+    color: white;
+
+}
+
+.container {
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
