@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const StartPage = () => {
+const StartPage = (props) => {
     return (
-        <div>
-            StartPage
-        </div>
+        <Fragment>
+            <td>Привет</td>
+            <td>Мир</td>
+        </Fragment>
     );
 };
 

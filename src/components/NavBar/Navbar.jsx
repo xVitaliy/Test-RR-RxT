@@ -10,7 +10,10 @@ const Navbar = () => {
                 <NavLink to={'/counter'}> Counter</NavLink>
             </div>
             <div>
-                <NavLink to={'/users'}> Users</NavLink>
+                <NavLink to={'/users'}>Users</NavLink>
+            </div>
+            <div>
+                <NavLink to={'/todos'}>Todos</NavLink>
             </div>
             {/*</div>*/}
         </aside>

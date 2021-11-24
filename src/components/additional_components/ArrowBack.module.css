@@ -1,0 +1,30 @@
+.arrowBtn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    color: darkorange;
+
+    font-family: -apple-system, sans-serif;
+    font-size: 26px;
+    border: 2px solid darkorange;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.arrowBtn:hover {
+    box-shadow: 0 0 10px darkorange, 0 0 20px darkorange;
+    transform: rotate(-360deg);
+    transition: 0.5s linear;
+}
+
+div a {
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+

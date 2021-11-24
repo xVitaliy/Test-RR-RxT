@@ -2,15 +2,14 @@ import React from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../../redux/counterSlice";
 import { NavLink } from "react-router-dom";
+import ArrowBack from "../additional_components/ArrowBack";
 
 const Counter = () => {
     const dispatch = useDispatch();
     const count = useSelector(state => state.counter.count)
     return (
         <div>
-            <div>
-                <NavLink style={{ color: "yellow" }} to={'/'}>_back</NavLink>
-            </div>
+            <ArrowBack />
             <div style={{ fontSize: '40px', fontWeight: 'bold' }}>
                 {count}
             </div>
