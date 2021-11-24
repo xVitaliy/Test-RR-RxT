@@ -1,8 +1,10 @@
 .mainWrapper {
     grid-area: main;
     border: 2px dashed darkslateblue;
-    background-color: darkslategrey;
+    background-color: red;
     color: white;
     padding: 2%;
     position: relative;
 }
+
+/*background-color: darkslategrey;*/
