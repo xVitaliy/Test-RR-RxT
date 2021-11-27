@@ -3,4 +3,6 @@
     border: 2px dashed darkslateblue;
     background-color: darkslategrey;
     color: white;
+    display: grid;
+    place-items: center;
 }

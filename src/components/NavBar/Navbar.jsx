@@ -15,6 +15,12 @@ const Navbar = () => {
             <div>
                 <NavLink to={'/todos'}>Todos</NavLink>
             </div>
+            <div>
+                <NavLink to={'/render-props'}>Render props</NavLink>
+            </div>
+            <div>
+                <NavLink to={'/test'}>Test</NavLink>
+            </div>
             {/*</div>*/}
         </aside>
     );
