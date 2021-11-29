@@ -1,24 +1,48 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { fetchTodos } from "../../redux/todosSlice";
+import React, { useState } from 'react';
+import TodoInputField from "./TodoInputField";
+import TodoList from "./TodoList";
+
 
 const Todos = () => {
-    console.log('render')
-    const dispatch = useDispatch();
-    const stateTodos = useSelector(state => state.todos.todos)
+    const [todos, setTodos] = useState([])
+    const [text, setText] = useState('')
 
-    useEffect(() => {
-        dispatch(fetchTodos())
-    }, [dispatch])
+    const inputRedact = (e) => {
+        setText(e.target.value)
+    }
+    const addTodo = () => {
+        if (text.trim().length === 0) return
+        setTodos([
+            ...todos,
+            {
+                id: new Date().toISOString(),
+                text,
+                completed: false,
+            }
+        ])
+        setText('')
+    }
+    window.todos = todos
 
+    const toggleCompleted = (todoId) => {
+        setTodos(todos.map(todo => {
+            if (todoId !== todo.id) return todo
+            return {
+                ...todo,
+                completed: !todo.completed
+            }
+        }))
+    }
 
-    let res = stateTodos.map(todo => <pre key={todo.id}>
-        {JSON.stringify(todo)}
-    </pre>)
+    const removeTodo = (todoId) => {
+        setTodos(todos.filter(todo => todo.id !== todoId))
+    }
 
     return (
         <div>
-            {res}
+            <TodoInputField text={text} inputRedact={inputRedact} addTodo={addTodo} />
+            <TodoList removeTodo={removeTodo} toggleCompleted={toggleCompleted} todos={todos} />
+
         </div>
     );
 };

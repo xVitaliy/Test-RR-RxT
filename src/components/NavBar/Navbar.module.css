@@ -8,13 +8,24 @@
     text-align: -webkit-center;
 }
 
-
-.navbarWrapper a {
-    color: white;
-    text-decoration: none;
-}
-
 .navbarWrapper a:hover {
     text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
     transition: 0.2s linear;
 }
+
+.notActive {
+    color: white;
+    text-decoration: none;
+}
+
+
+.active {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
+    transition: 0.2s linear;
+    text-decoration: none;
+}
+
+
+
+

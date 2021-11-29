@@ -1,0 +1,18 @@
+.listItem {
+    list-style: none;
+    font-size: 26px;
+}
+
+.text {
+    margin: 0 20px;
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+

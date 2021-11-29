@@ -5,23 +5,30 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <aside className={classes.navbarWrapper}>
-            {/*<div className={classes.linkBlock}>*/}
-            <div>
-                <NavLink to={'/counter'}> Counter</NavLink>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/counter'> Counter</NavLink>
             </div>
-            <div>
-                <NavLink to={'/users'}>Users</NavLink>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/users'>Users</NavLink>
             </div>
-            <div>
-                <NavLink to={'/todos'}>Todos</NavLink>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/todos'>Todos (not Redux)</NavLink>
             </div>
-            <div>
-                <NavLink to={'/render-props'}>Render props</NavLink>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/todos-redux'>Todos (Redux toolkit)</NavLink>
             </div>
-            <div>
-                <NavLink to={'/test'}>Test</NavLink>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive} to='/render-props'>Render
+                    props</NavLink>
             </div>
-            {/*</div>*/}
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/test'>Test</NavLink>
+            </div>
         </aside>
     );
 };

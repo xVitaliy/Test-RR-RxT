@@ -1,0 +1,18 @@
+.delete {
+    color: red;
+    cursor: pointer;
+    margin: 0;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.list {
+    font-size: 26px;
+    list-style: none;
+}
+
+.marg {
+    margin: 0 20px;
+}

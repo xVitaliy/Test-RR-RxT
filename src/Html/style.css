@@ -1,0 +1,13 @@
+.block {
+    /*width: 200px;*/
+    /*height: 200px;*/
+    height: 0;
+    width: 0;
+    border-bottom: 50px solid red;
+    border-left: 90px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.block:hover {
+    border-bottom: 100px solid cornflowerblue;
+}

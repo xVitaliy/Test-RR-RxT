@@ -7,6 +7,7 @@ import Users from "../Users/Users";
 import Todos from "../Todos/Todos";
 import RenderProps from "../RenderProps/RenderProps";
 import Test from "../Test/Test";
+import TodosToolkit from "../TodosReduxToolkit/TodosToolkit";
 
 const Main = () => {
     return (
@@ -16,6 +17,7 @@ const Main = () => {
                 <Route path={'/counter'} element={<Counter />} />
                 <Route path={'/users'} element={<Users />} />
                 <Route path={'/todos'} element={<Todos />} />
+                <Route path={'/todos-redux'} element={<TodosToolkit />} />
                 <Route path={'/render-props'} element={<RenderProps />} />
                 <Route path={'/test'} element={<Test />} />
             </Routes>

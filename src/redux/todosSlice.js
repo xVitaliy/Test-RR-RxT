@@ -1,37 +1,35 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
-export const fetchTodos = createAsyncThunk(
-    'todos/fetchTodos',
-    async () => {
-        let response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
-        return await response.json()
-    }
-)
-
-const initialState = {
-    todos: [],
-    status: null,
-    error: null
-}
+import { createSlice } from "@reduxjs/toolkit";
 
 const todosSlice = createSlice({
     name: 'todos',
-    initialState,
-    reducers: {},
-    extraReducers: {
-        [fetchTodos.pending]: (state, action) => {
+    initialState: {
+        todos: [],
+        newMessage: '',
+    },
+    reducers: {
+        setText(state, action) {
+            state.newMessage = action.payload
         },
-
-        [fetchTodos.fulfilled]: (state, action) => {
-            state.todos = action.payload
+        addTodos(state, action) {
+            let obj = {
+                id: new Date().toISOString(),
+                text: state.newMessage,
+                completed: false,
+            }
+            if (obj.text.length === 0) return
+            state.todos.push(obj);
+            state.newMessage = ''
         },
+        removeTodos(state, action) {
+            state.todos = state.todos.filter(todo => todo.id !== action.payload.id)
 
-        [fetchTodos.rejected]: (state, action) => {
         },
-
+        toggleTodosCompleted(state, action) {
+            const targetObj = state.todos.find(todo => todo.id === action.payload.id)
+            targetObj.completed = !targetObj.completed
+        }
     }
 })
 
-
-// export const {} = todosSlice.actions
+export const { addTodos, removeTodos, toggleTodosCompleted, setText } = todosSlice.actions
 export default todosSlice.reducer
