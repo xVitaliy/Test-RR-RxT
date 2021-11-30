@@ -22,6 +22,10 @@ const Navbar = () => {
                          to='/todos-redux'>Todos (Redux toolkit)</NavLink>
             </div>
             <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/todos-redux-async'>Todos (Async_Redux)</NavLink>
+            </div>
+            <div className='item'>
                 <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive} to='/render-props'>Render
                     props</NavLink>
             </div>

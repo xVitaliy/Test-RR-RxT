@@ -8,6 +8,7 @@ import Todos from "../Todos/Todos";
 import RenderProps from "../RenderProps/RenderProps";
 import Test from "../Test/Test";
 import TodosToolkit from "../TodosReduxToolkit/TodosToolkit";
+import TodosAsync from "../TodosAsync/TodosAsync";
 
 const Main = () => {
     return (
@@ -18,6 +19,7 @@ const Main = () => {
                 <Route path={'/users'} element={<Users />} />
                 <Route path={'/todos'} element={<Todos />} />
                 <Route path={'/todos-redux'} element={<TodosToolkit />} />
+                <Route path={'/todos-redux-async'} element={<TodosAsync />} />
                 <Route path={'/render-props'} element={<RenderProps />} />
                 <Route path={'/test'} element={<Test />} />
             </Routes>
