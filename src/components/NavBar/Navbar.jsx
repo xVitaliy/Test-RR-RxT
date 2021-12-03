@@ -33,6 +33,14 @@ const Navbar = () => {
                 <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
                          to='/test'>Test</NavLink>
             </div>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/test-graph'>Test_GraphQL</NavLink>
+            </div>
+            <div className='item'>
+                <NavLink className={({ isActive }) => isActive ? classes.active : classes.notActive}
+                         to='/test-2-graph'>Test_2_GraphQL</NavLink>
+            </div>
         </aside>
     );
 };

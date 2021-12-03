@@ -1,9 +1,11 @@
 import React from 'react';
+import { useQuery } from "@apollo/client";
 
 
 const Counter = () => {
     // const dispatch = useDispatch();
     // const count = useSelector(state => state.counter.count)
+
     return (
         <div>
             Counter - not found

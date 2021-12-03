@@ -6,12 +6,17 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import { ApolloProvider } from "@apollo/client";
+import { client } from "./graphql/client";
+
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <ApolloProvider client={client}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </ApolloProvider>
     </Provider>,
     document.getElementById('root')
 );

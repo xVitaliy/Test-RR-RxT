@@ -12,10 +12,7 @@ code {
     monospace;
 }
 
-/*.item a {*/
-/*    color: white;*/
-/*}*/
 
-/*.active {*/
-/*    color: gold;*/
-/*}*/
+p {
+    margin: 0;
+}

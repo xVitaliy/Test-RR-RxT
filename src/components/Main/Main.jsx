@@ -9,6 +9,8 @@ import RenderProps from "../RenderProps/RenderProps";
 import Test from "../Test/Test";
 import TodosToolkit from "../TodosReduxToolkit/TodosToolkit";
 import TodosAsync from "../TodosAsync/TodosAsync";
+import TestGraphQl from "../GraphQL/TestGraphQL";
+import Test2Gql from "../Test-2-gql/Test2Gql";
 
 const Main = () => {
     return (
@@ -22,6 +24,8 @@ const Main = () => {
                 <Route path={'/todos-redux-async'} element={<TodosAsync />} />
                 <Route path={'/render-props'} element={<RenderProps />} />
                 <Route path={'/test'} element={<Test />} />
+                <Route path={'/test-graph'} element={<TestGraphQl />} />
+                <Route path={'/test-2-graph'} element={<Test2Gql />} />
             </Routes>
         </div>
     );

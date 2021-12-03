@@ -3,6 +3,7 @@ import usersSlice from "./usersSlice";
 import counterSlice from "./counterSlice";
 import todosSlice from "./todosSlice";
 import todosAsyncSlice from "./todosAsyncSlice";
+import SpaceXRocetsgqlSlice from "./SpaseX_Rocets_gql";
 
 export const store = configureStore({
     reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
         users: usersSlice,
         todosItem: todosSlice,
         todosAsync: todosAsyncSlice,
+        SpaceXRockets: SpaceXRocetsgqlSlice,
     }
 })
 window.store = store
