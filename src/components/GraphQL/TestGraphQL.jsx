@@ -52,7 +52,6 @@ const TestGraphQl = () => {
                 </picture>
             </div>
             {content}
-
         </div>
     )
 }

@@ -11,6 +11,7 @@ import TodosToolkit from "../TodosReduxToolkit/TodosToolkit";
 import TodosAsync from "../TodosAsync/TodosAsync";
 import TestGraphQl from "../GraphQL/TestGraphQL";
 import Test2Gql from "../Test-2-gql/Test2Gql";
+import FormikTest from "../Formik/FormikTest";
 
 const Main = () => {
     return (
@@ -26,6 +27,7 @@ const Main = () => {
                 <Route path={'/test'} element={<Test />} />
                 <Route path={'/test-graph'} element={<TestGraphQl />} />
                 <Route path={'/test-2-graph'} element={<Test2Gql />} />
+                <Route path={'/formik'} element={<FormikTest />} />
             </Routes>
         </div>
     );
